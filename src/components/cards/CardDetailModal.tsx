@@ -251,7 +251,7 @@ export default function CardDetailModal({
                   ✓ I watched this
                 </button>
               )}
-              {!isOwner && currentMember && otherMembers.length > 0 && (
+              {currentMember && otherMembers.length > 0 && (
                 <button
                   type="button"
                   onClick={() => setShowSuggestPicker((v) => !v)}
