@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-stone-50 text-stone-900 antialiased;
+  }
+}
+
+@layer components {
+  /* Trading card base style */
+  .video-card {
+    @apply rounded-xl border-2 border-stone-200 bg-white shadow-md
+           transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-trade-400;
+  }
+
+  /* Duration badge overlay */
+  .duration-badge {
+    @apply absolute bottom-2 right-2 rounded bg-black/80 px-1.5 py-0.5
+           text-xs font-mono font-semibold text-white;
+  }
+
+  /* Tag chip */
+  .tag-chip {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5
+           text-xs font-medium;
+  }
+}
+
+@layer utilities {
+  /* Slim, lightly visible scrollbars on horizontal carousels */
+  .carousel-scroll::-webkit-scrollbar {
+    height: 6px;
+  }
+  .carousel-scroll::-webkit-scrollbar-thumb {
+    background-color: rgb(214 211 209 / 0.7);
+    border-radius: 9999px;
+  }
+}
